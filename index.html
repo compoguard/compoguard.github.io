@@ -1,13 +1,170 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compoguard - Next-Gen Detection Engineering</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompoGuard – Next-Gen SecOps Platform</title>
+  <meta name="description"
+    content="CompoGuard – SecOps ekibinizin zafiyet keşfi, SIEM izleme ve EDR kuralı üretimi için tek nokta çözüm.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Ambient Background Glows -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+
+  <header class="header">
+    <nav class="nav">
+      <div class="logo-container">
+        <div class="logo-icon"></div>
+        <a href="#" class="logo">CompoGuard</a>
+      </div>
+      <button id="lang-toggle" class="lang-btn">
+        <span class="lang-icon">🌐</span> <span class="lang-text">Türkçe</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero hidden">
+      <div class="hero-content">
+        <div class="badge">Virtual Patching & SCA Platform</div>
+        <h1 class="hero-title lang-en">We Secure Your Software <br>Dependencies.</h1>
+        <h1 class="hero-title lang-tr">Yazılım Bağımlılıklarınızın <br>Güvenliğini Sağlıyoruz.</h1>
+
+        <p class="hero-subtitle lang-en">CompoGuard identifies vulnerabilities using only your SBOM and triggers
+          <strong>Virtual Patching</strong> with automated Sigma & YARA rules.</p>
+        <p class="hero-subtitle lang-tr">CompoGuard sadece SBOM analiziyle zafiyetleri belirler ve <strong>Sanal
+            Yama</strong> (Virtual Patching) teknolojisiyle anında koruma sağlar.</p>
+
+        <div class="hero-actions">
+          <a href="https://app.compoguard.com" class="btn-primary lang-en">Go to App</a>
+          <a href="https://app.compoguard.com" class="btn-primary lang-tr">Uygulamaya Git</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview hidden" id="overview">
+      <div class="section-header">
+        <h2 class="section-title lang-en">The CompoGuard Way</h2>
+        <h2 class="section-title lang-tr">CompoGuard Farkı</h2>
+        <p class="section-desc lang-en" style="max-width: 700px; margin: 0 auto;">
+          Traditional SCA tools flood you with noise. We focus on action directly.
+        </p>
+        <p class="section-desc lang-tr" style="max-width: 700px; margin: 0 auto;">
+          Geleneksel SCA araçları sizi gürültüye boğar. Biz doğrudan aksiyona odaklanıyoruz.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Features Section (Grid Layout) -->
+    <section class="features hidden" id="features">
+      <div class="container">
+        <div class="features-grid">
+          <!-- Feature 1: Only SBOM -->
+          <div class="feature-card">
+            <div class="card-icon">🔒</div>
+            <h3 class="card-title lang-en">Privacy by Design</h3>
+            <h3 class="card-title lang-tr">Sadece SBOM</h3>
+            <p class="card-desc lang-en">We don't touch your source code. We only ingest your SBOM to analyze
+              dependencies securely.</p>
+            <p class="card-desc lang-tr">Kaynak kodunuza dokunmuyoruz. Güvenli analiz için sadece SBOM dosyanızı
+              alıyoruz.</p>
+          </div>
+
+          <!-- Feature 2: Relevant Vulns -->
+          <div class="feature-card">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title lang-en">Precise Reporting</h3>
+            <h3 class="card-title lang-tr">Nokta Atışı Tespit</h3>
+            <p class="card-desc lang-en">Zero false positives. We only report confirmed vulnerabilities that
+              specifically affect your version.</p>
+            <p class="card-desc lang-tr">Sadece sizde gerçekten var olan zafiyetleri bildiriyoruz. Gereksiz bildirim
+              kirliliği yok.</p>
+          </div>
+
+          <!-- Feature 3: Sigma & YARA -->
+          <div class="feature-card">
+            <div class="card-icon">🛡️</div>
+            <h3 class="card-title lang-en">Interim Protection</h3>
+            <h3 class="card-title lang-tr">Yama Öncesi Koruma</h3>
+            <p class="card-desc lang-en">Can't patch yet? Get auto-generated **Sigma** & **YARA** rules to monitor
+              threats until update.</p>
+            <p class="card-desc lang-tr">Henüz güncelleme yapamadınız mı? Yama yapılana kadar izleme için **Sigma** ve
+              **YARA** kuralları hazır.</p>
+          </div>
+
+          <!-- Feature 4: SIEM Conversion -->
+          <div class="feature-card">
+            <div class="card-icon">🔄</div>
+            <h3 class="card-title lang-en">Native SIEM Export</h3>
+            <h3 class="card-title lang-tr">SIEM Entegrasyonu</h3>
+            <p class="card-desc lang-en">One-click conversion of rules to **Splunk**, **QRadar**, and **ELK** formats.
+            </p>
+            <p class="card-desc lang-tr">Kuralları tek tıkla **Splunk**, **QRadar** ve **ELK** formatlarına dönüştürün.
+            </p>
+          </div>
+
+          <!-- Feature 5: Red Team -->
+          <div class="feature-card">
+            <div class="card-icon">⚔️</div>
+            <h3 class="card-title lang-en">Red Team Arsenal</h3>
+            <h3 class="card-title lang-tr">Red Team İçin Exploit</h3>
+            <p class="card-desc lang-en">We provide verified exploit codes for your internal Red Team to validate the
+              risk accurately.</p>
+            <p class="card-desc lang-tr">Kendi Red Team ekibiniz için ilgili zafiyetin doğrulanmış exploit kodunu
+              sunuyoruz.</p>
+          </div>
+
+          <!-- Feature 6: Regular Scanning -->
+          <div class="feature-card">
+            <div class="card-icon">🔄</div>
+            <h3 class="card-title lang-en">Continuous SCA</h3>
+            <h3 class="card-title lang-tr">Düzenli Tarama</h3>
+            <p class="card-desc lang-en">Automated regular scanning ensures you are always aware of new threats in your
+              stack.</p>
+            <p class="card-desc lang-tr">Siz kodunuzu değiştirmeseniz bile düzenli taramalarla yeni çıkan tehditlerden
+              haberdar olun.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta hidden" id="cta">
+      <div class="cta-content">
+        <h2 class="section-title lang-en">Secure Your Dependencies Now</h2>
+        <h2 class="section-title lang-tr">Bağımlılıklarınızı Güvenceye Alın</h2>
+        <p class="lang-en">Start using CompoGuard today. No code access, just pure security.</p>
+        <p class="lang-tr">CompoGuard'ı bugün kullanmaya başlayın. Kod erişimi yok, sadece güvenlik.</p>
+        <a href="https://app.compoguard.com" class="btn-primary lang-en">Launch App</a>
+        <a href="https://app.compoguard.com" class="btn-primary lang-tr">Uygulamayı Başlat</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo">CompoGuard</span>
+        <span class="version">v1.0.0</span>
+      </div>
+      <p class="lang-en copyright">© 2026 CompoGuard. All rights reserved.</p>
+      <p class="lang-tr copyright">© 2026 CompoGuard. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+</body>
+
 </html>
