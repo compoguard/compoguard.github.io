@@ -102,9 +102,14 @@ body {
 .logo-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  /* Matching the login page gradient: blue-600 to indigo-600 */
+  background: linear-gradient(135deg, #2563EB, #4F46E5);
   border-radius: 8px;
-  box-shadow: 0 0 15px var(--primary-glow);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .logo {
