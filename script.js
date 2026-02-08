@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* -----------------------------------------------------
        3. Card Glow Effect (Mouse Tracking)
        ----------------------------------------------------- */
-    const cards = document.querySelectorAll('.feature-card');
+    const cards = document.querySelectorAll('.feature-card, .workflow-step');
 
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
